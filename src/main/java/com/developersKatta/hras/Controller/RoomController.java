@@ -36,6 +36,7 @@ public class RoomController {
 	public ModelAndView allroomsa(@RequestParam int id) {
 		ModelAndView mv = new ModelAndView("allRoom");
 		Room room = roomRepository.findById(id).orElse(new Room());
+		// another changes
 		mv.addObject("roomData", room);
 		System.out.println("fetched data : " + room);
 		return mv;
@@ -51,13 +52,14 @@ public class RoomController {
 		Iterator<Room> iterator = roomList.iterator();
 		while (iterator.hasNext()) {
 			System.out.println(iterator.next().getRoomnumber());
+			// change one two three
 		}
 		
 		return mav;
 	}
 
 //	@GetMapping("/employees")
-//	public ModelAndView showAllEmployees() {
+//	public ModelAndView showAllEmployees() { // making changes here to create conflict
 //		System.out.println(this.getClass().getSimpleName() + ":=======>Showing Employee list.");
 //		ModelAndView mav = new ModelAndView("employees"); // Here employees is a jsp page name
 //		List<Employee> employeeList = employeeService.getAllEmployee();
