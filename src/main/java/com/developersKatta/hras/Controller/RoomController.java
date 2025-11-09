@@ -38,6 +38,7 @@ public class RoomController {
 		Room room = roomRepository.findById(id).orElse(new Room());
 		mv.addObject("roomData", room);
 		System.out.println("fetched data : " + room);
+		// change 1 to create conflict
 		return mv;
 	}
 
@@ -51,18 +52,19 @@ public class RoomController {
 		Iterator<Room> iterator = roomList.iterator();
 		while (iterator.hasNext()) {
 			System.out.println(iterator.next().getRoomnumber());
+			// another change to create conflict
 		}
 		
 		return mav;
 	}
 
-//	@GetMapping("/employees")
-//	public ModelAndView showAllEmployees() {
-//		System.out.println(this.getClass().getSimpleName() + ":=======>Showing Employee list.");
-//		ModelAndView mav = new ModelAndView("employees"); // Here employees is a jsp page name
-//		List<Employee> employeeList = employeeService.getAllEmployee();
-//		mav.addObject("employeeList", employeeList); // Set the attribute as "employeeList"
-//		return mav;
-//	}
+	@GetMapping("/employees")
+	public ModelAndView showAllEmployees() {
+		System.out.println(this.getClass().getSimpleName() + ":=======>Showing Employee list.");
+		ModelAndView mav = new ModelAndView("employees"); // Here employees is a jsp page name
+		List<Employee> employeeList = employeeService.getAllEmployee();
+		mav.addObject("employeeList", employeeList); // Set the attribute as "employeeList"
+		return mav;
+	}
 
 }
