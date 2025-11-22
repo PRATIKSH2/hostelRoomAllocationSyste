@@ -59,14 +59,14 @@ public class RoomController {
 		return mav;
 	}
 
-	@GetMapping("/employees")
-	public ModelAndView showAllEmployees() {
-		System.out.println(this.getClass().getSimpleName() + ":=======>Showing Employee list.");
-		ModelAndView mav = new ModelAndView("employees"); // Here employees is a jsp page name
-		List<Employee> employeeList = employeeService.getAllEmployee();
-		mav.addObject("employeeList", employeeList); // Set the attribute as "employeeList"
-		return mav;
-	}
+	// @GetMapping("/employees")
+	// public ModelAndView showAllEmployees() {
+	// 	System.out.println(this.getClass().getSimpleName() + ":=======>Showing Employee list.");
+	// 	ModelAndView mav = new ModelAndView("employees"); // Here employees is a jsp page name
+	// 	List<Employee> employeeList = employeeService.getAllEmployee();
+	// 	mav.addObject("employeeList", employeeList); // Set the attribute as "employeeList"
+	// 	return mav;
+	// }
 
 //	@GetMapping("/employees")
 //	public ModelAndView showAllEmployees() { // making changes here to create conflict
