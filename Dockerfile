@@ -2,7 +2,9 @@ FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
-COPY target/hostelroomallocationsystem-0.0.3.jar app.jar
+COPY target/HostelRoomAllocationSystem-0.0.1-SNAPSHOT.jar app.jar
+# अथवा जर JAR version बदलत असेल:
+# COPY target/*.jar app.jar
 
 EXPOSE 8080
 
