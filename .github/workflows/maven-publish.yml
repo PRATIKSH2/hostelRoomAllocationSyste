@@ -36,5 +36,5 @@ jobs:
       run: |
         docker run -d \
           --name hostelapp \
-          -p 8888:8080 \
+          -p 8888:8888 \
           hostelapp:latest
